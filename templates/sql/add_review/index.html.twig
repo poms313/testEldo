@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %} {% block title %}Ajouter un avis{% endblock %} {% form_theme addReviewForm 'bootstrap_4_layout.html.twig' %} {% block body %}
+<div class="grey roundedCorners margin padding ">
+    <div class=" lightGrey animCreateFromCenter">
+        <h1 class="title padding">Ajouter un avis</h1>
+    </div>
+    {{ form_start(addReviewForm) }}
+    <div class="margin">
+        {{ form_row(addReviewForm.artisanId) }}
+    </div>
+    <div class="margin">
+        {{ form_row(addReviewForm.author) }}
+    </div>
+    <div class="margin">
+        {{ form_row(addReviewForm.grade) }}
+    </div>
+    <div class="margin">
+        {{ form_row(addReviewForm.comment) }}
+    </div>
+    <div class="margin">
+        {{ form_row(addReviewForm.submit) }}
+    </div>
+    {{ form_row(addReviewForm._token) }} {{ form_end(addReviewForm.comment) }}
+
+</div>
+{% endblock %}

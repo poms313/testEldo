@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %} {% block title %}Accueil{% endblock %} {% block body %}
+<div class="center">
+    <div class="roundedCorners grey padding">
+        <div class="title lightGrey padding">
+            <h1>Test technique Eldo</h1>
+        </div>
+
+        <div class="center">
+            <p class="customButton"><a href="{{ path('sql') }}">test SQL</a></p>
+            <p class="customButton"><a href="{{ path('algo') }}">test algorithme</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

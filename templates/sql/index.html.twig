@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %} {% block title %}Après l'intervention{% endblock %} {% block body %}
+<div class="grey roundedCorners margin padding ">
+    <div class=" lightGrey animCreateFromCenter">
+        <h1 class="title padding">Votre avis</h1>
+    </div>
+    <div class="margin padding">
+        <h2>Un de nos artisans vient faire une intervention à votre domicile, merci de votre confiance!</h2>
+        <h3>Merci de leur laisser un avis</h3>
+        <p class="customButton"><a href="{{ path('add_review') }}">Ajouter votre avis</a></p>
+        <h3>Voici les 3 derniers avis de chacuns de nos artisans</h3>
+    </div>
+
+    {% if listLastReviewsById is not empty %}
+    <div class="margin padding">
+        {% for artisan in listLastReviewsById %}
+        <div class="lightGrey roundedCorners margin">
+            <div class="padding">
+                <h3>Nom de l'artisan: {{ artisan[0].artisanId.name }}</h3>
+                <p><small>Identifiant: {{ artisan[0].artisanId.id }}</small></p>
+            </div>
+            <div class="flexContainer">
+                {% for review in artisan %}
+                <div class="dark padding margin roundedCorners">
+                    <p>Auteur de l'avis: <br>{{ review.author }}</p>
+                    <p>Note: <br>{{ review.grade }}</p>
+                    <p>Commentaire: <br>{{ review.comment }}</p>
+                    <p>Date: <br>le {{ review.reviewDate|date('d-m-Y à H') }}h</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endif %}
+
+
+</div>
+<p class="customButton"><a href="{{ path('home') }}">Retour</a></p>
+{% endblock %}
