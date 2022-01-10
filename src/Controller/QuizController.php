@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AlgoController extends AbstractController
+class QuizController extends AbstractController
 {
     /**
-     * @Route("/algo", name="algo")
+     * @Route("/quiz", name="quiz")
      */
     public function index(): Response
     {
-        return $this->render('algo/index.html.twig', [
+        return $this->render('quiz/index.html.twig', [
         ]);
     }
 }

@@ -14,11 +14,15 @@
     <div id="loading">
         <img id="loadingImg" src="{{ absolute_url(asset('images/lazyload.gif')) }}" alt="loading">
     </div>
-    <div class="content">
+    <div class="content center">
         {% block body %} {% endblock %}
     </div>
     {% block javascripts %}
     <script src="{{ asset('js/script.js') }}" defer></script>
+    <script src="{{ asset('js/quiz/personn.js') }}" defer></script>
+    <script src="{{ asset('js/quiz/question.js') }}" defer></script>
+    <script src="{{ asset('js/quiz/manageQuizView.js') }}" defer></script>
+    <script src="{{ asset('js/quiz/main.js') }}" defer></script>
     {% endblock %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>

@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %} {% block title %}Quiz en cours{% endblock %} {% block body %}
+<div class="center grey roundedCorners padding">
+    <div id="quiz">
+        <p id="start" class="customButton">Démarrer le test</p>
+    </div>
+    <p class="customButton"><a href="{{ path('algo') }}">Retour</a></p>
+</div>
+{% endblock %}

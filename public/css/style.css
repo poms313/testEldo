@@ -28,14 +28,15 @@ body {
 
 #loadingImg {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
     width: 200px;
     z-index: 100;
 }
 
 .content {
     width: 97%;
+    min-height: 100vh;
     margin: auto;
 }
 
@@ -125,6 +126,8 @@ a {
     align-items: center;
     justify-content: center;
     text-align: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .center>div {
@@ -141,4 +144,8 @@ a {
     .flexContainer {
         flex-direction: row;
     }
+}
+
+.hidden {
+    display: none;
 }

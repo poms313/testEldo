@@ -1,20 +1,7 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello AlgoController!{% endblock %}
-
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/eldo/src/Controller/AlgoController.php'|file_link(0) }}">src/Controller/AlgoController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/eldo/templates/algo/index.html.twig'|file_link(0) }}">templates/algo/index.html.twig</a></code></li>
-    </ul>
+{% extends 'base.html.twig' %} {% block title %}Quiz logique{% endblock %} {% block body %}
+<div class="center grey roundedCorners padding">
+    <p class="customButton"><a href="{{ path('quiz') }}">Démarrer</a></p>
+    <p class="customButton"><a href="{{ path('algo') }}">Retour</a></p>
 </div>
+
 {% endblock %}
