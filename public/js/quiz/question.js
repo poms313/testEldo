@@ -69,10 +69,10 @@ function answerQuestionTwo(yourChoise) {
 
     function checkYourChoice(yourChoise) {
         if (yourChoise == "false") {
-            localStorage.setItem('textContent', 'Félicitation, Mathieu et moi sommes bien amis (Mathieu a aucune relation). Félicitations vous avez réussi le quiz avec une note de 2/2!');
+            localStorage.setItem('textContent', 'Félicitation, Mathieu et moi ne sommes pas amis (Mathieu a aucune relation sauf avec Aurore et pareil pour Aurore). Félicitations vous avez réussi le quiz avec une note de 2/2!');
             localStorage.setItem('questionTwoResponce', false);
         } else {
-            localStorage.setItem('textContent', 'Désolé, Mathieu et moi ne sommes pas amies (Mathieu a aucune relation)!. Il faut recommencer!');
+            localStorage.setItem('textContent', 'Désolé, Mathieu et moi ne sommes pas amis (Mathieu a aucune relation sauf avec Aurore et pareil pour Aurore)!. Il faut recommencer!');
             localStorage.setItem('questionTwoResponce', true);
         }
     }
